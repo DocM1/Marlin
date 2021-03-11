@@ -26,7 +26,8 @@
 // #define V6_330_TITAN_NO_TMC 1
 // #define V6_330_NO_TITAN_TMC 1
 // #define V6_330_NO_TITAN_NO_TMC 1
-// #define V6_400_TITAN_TMC 1
+#define V6_400_TITAN_TMC 1
+#define V6_400_BMGdirect_TMC 1
 // #define V6_400_NO_TITAN_TMC 1
 // #define V6_500_TITAN_TMC 1
 
@@ -59,7 +60,7 @@
 
 // #define TFT_LVGL_UI
 // #define TFT_CLASSIC_UI
-// #define TFT_COLOR_UI
+#define TFT_COLOR_UI
 
 #if V6_330_TITAN_TMC
   #define MOTHERBOARD BOARD_CHITU3D_V6
@@ -109,6 +110,16 @@
   #define Y_BED_SIZE 400
   #define Z_MAX_POS 400
   #define CUSTOM_MACHINE_NAME "Tronxy X5SA V6 400 Titan TMC"
+  #define COREXY
+
+#elif V6_400_BMGdirect_TMC
+  #define MOTHERBOARD BOARD_CHITU3D_V6
+  #define WITH_TMC 1
+  #define WITH_BMG 1
+  #define X_BED_SIZE 400
+  #define Y_BED_SIZE 400
+  #define Z_MAX_POS 400
+  #define CUSTOM_MACHINE_NAME "Tronxy X5SA V6 400 BMGdirect TMC"
   #define COREXY
 
 #elif V6_400_NO_TITAN_TMC
